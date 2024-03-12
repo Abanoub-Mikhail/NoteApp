@@ -56,7 +56,7 @@ export default function Notes({allNotes , notesDelete , notesGet}) {
 
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>New Note</Modal.Title>
+          <Modal.Title>Update Note</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={formik.handleSubmit}>

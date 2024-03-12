@@ -50,7 +50,7 @@ export default function Signin() {
     <>
     
     <section className='bg-sec-main form p-3 py-4 text-white mx-auto rounded-3'>
-    <div className="img text-center"><img src={img1} width={200} alt="" /></div>
+    <div className="img text-center mx-auto"><img src={img1} width={200} alt="" /></div>
       <h2 className=' text-capitalize text-center mb-4 fw-bold'>signin</h2>
       <form onSubmit={formik.handleSubmit}>
       {error ? <div className='text-center text-danger mb-3 text-capitalize'> * {error}</div> : null}  

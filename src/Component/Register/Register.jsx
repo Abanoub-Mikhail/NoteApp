@@ -1,6 +1,6 @@
 import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { userContext } from '../../Context/UserContext';
 import img1 from '../../assets/image/sign in.webp'
@@ -55,7 +55,7 @@ export default function Register() {
     <>
     
     <section className='bg-sec-main form p-3 text-white mx-auto rounded-3'>
-      <div className="img text-center"><img src={img1} width={200} alt="" /></div>
+      <div className="img text-center mx-auto"><img src={img1} width={200} alt="" /></div>
       <h2 className=' text-capitalize text-center mb-4 fw-bold'>signUp</h2>
       <form onSubmit={formik.handleSubmit}>
       {error ? <div className='text-center text-danger mb-3 text-capitalize'> * {error}</div> : null}
@@ -99,7 +99,7 @@ export default function Register() {
       {loading ? <i className='fa fa-spinner fa-spin'></i> : "Register"}
         </button>
       </form>
-
+      <p className=' text-capitalize mt-4'>You have an account? <Link className=' text-warning ' to={'/signin'}>Login</Link></p>
     </section>
     
     </>
