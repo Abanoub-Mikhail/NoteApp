@@ -1,25 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
+import LayOut from './Component/LayOut/LayOut';
+import Home from './Component/Home/Home';
+import Register from './Component/Register/Register';
+import Signin from './Component/Signin/Signin';
+import Start from './Component/Start/Start';
+import NotFound from './Component/NotFound/NotFound';
+import { useContext, useEffect } from 'react';
+import { userContext } from './Context/UserContext';
+import ProtectedRoutes from './Component/ProtectedRoutes/ProtectedRoutes';
+import ProtectedAuth from './Component/ProtectedAuth/ProtectedAuth';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  let {setToken}=useContext(userContext)
+
+  const routes = createBrowserRouter([
+    {path:'/', element:<LayOut/>, children: [
+      {path:'/home' , element: <ProtectedRoutes> <Home/></ProtectedRoutes>},
+      {path:'/register' , element: <ProtectedAuth><Register/></ProtectedAuth> },
+      {path:'/signin' , element: <ProtectedAuth><Signin/></ProtectedAuth> },
+      {index:true , element: <ProtectedAuth> <Start/></ProtectedAuth>},
+      {path:'*' , element:<NotFound/>},
+    ]}
+  ]);
+
+
+
+  useEffect(()=>{
+    if (localStorage.getItem("userToken") != null) {
+      setToken(localStorage.getItem("userToken"))
+    }
+  },[])
+
+  return <RouterProvider router={routes}></RouterProvider> ;
 }
 
 export default App;

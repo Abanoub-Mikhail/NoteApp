@@ -1,3 +1,10 @@
+
+:root {
+  --main-bg-color : rgb(20,36,83);
+  --second-bg-color : rgb(4,75,140);
+  --main-font-color : white;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +12,157 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color) ;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.mainStyle {
+  margin-top: 86px;
+  min-height: calc(-185px + 100vh);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-main {
+  background-color: var(--main-bg-color);
+}
+
+.bg-sec-main {
+  background-color: var(--second-bg-color);
+}
+
+section {
+  width: 90%;
+}
+
+section.form {
+  width: 50%;
+}
+
+.addNotes {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(0, 98, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  section {
+      width: 95%;
+  }
+
+  section.form {
+    width: 95%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+  .img {
+    width: 100% !important;
+  }
+
+  .revo {
+    flex-direction: column-reverse;
+  }
+  .madimi-one-regular {
+    font-size: 80px !important;
+  }
+  .addNotes {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    background-color: rgb(0, 98, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+  }
+
+  .addNotesDes {
+    display: none !important;
+  }
+  .notItem{
+    width: 100% !important;
+  }
+
+
+  .mainStyle {
+    margin-top: 86px;
+    min-height: calc(-185px + 100vh);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+}
+
+
+.bg-note {
+  background-color: rgb(55,25,105);
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 3px 8px;
+}
+
+
+
+
+.icon {
+  height: 30px;
+  width: 30px;
+  /* background-color: rgb(0, 98, 255); */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  resize: none;
+}
+
+.title p {
+  line-height: 40px;
+}
+
+.startNote {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6.25rem;
+}
+
+.notItem{
+  width: 50%;
 }
