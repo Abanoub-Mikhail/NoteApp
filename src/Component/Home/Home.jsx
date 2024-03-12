@@ -92,12 +92,13 @@ export default function Home() {
     
     <section className='p-3 py-4 text-white mx-auto rounded-3'>
       <h2 className=' text-center text-capitalize mb-4 h1 startNote border py-3 rounded-5'>note app😎</h2>
-      <button className='addNotesDes btn btn-primary ms-auto d-block w-100 fw-bold'  variant="primary" onClick={handleShow}><i className="fa-solid fa-circle-plus"></i> Add Notes</button>
+      <button className='addNotesDes btn btn-primary ms-auto d-block w-100 fw-bold mb-3'  variant="primary" onClick={handleShow}><i className="fa-solid fa-circle-plus"></i> Add Notes</button>
       <div className='addNotes'  variant="primary" onClick={handleShow}><i className="fa-solid fa-circle-plus"></i></div>
       {notes.length==0?
       <>
       <div className=' text-center'>
-      <h3 className=' py-4 text-center text-capitalize'>no notes found</h3>
+      <h3 className=' py-2 text-center text-capitalize respo '>to Add New Notes <br /> Click the Button Below ⤵</h3>
+      <h3 className=' py-2 text-center text-capitalize respoB '>to Add New Notes <br /> Click the top Button ⤴</h3>
       <img className='notItem' src={img1} alt="no notes added" />
       </div>
       

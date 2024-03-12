@@ -51,7 +51,7 @@ export default function Signin() {
     
     <section className='bg-sec-main form p-3 py-4 text-white mx-auto rounded-3'>
     <div className="img text-center mx-auto"><img src={img1} width={200} alt="" /></div>
-      <h2 className=' text-capitalize text-center mb-4 fw-bold'>signin</h2>
+      <h2 className=' text-capitalize text-center mb-4 fw-bold'>Login</h2>
       <form onSubmit={formik.handleSubmit}>
       {error ? <div className='text-center text-danger mb-3 text-capitalize'> * {error}</div> : null}  
       <div className="form-floating mb-3">
@@ -69,7 +69,7 @@ export default function Signin() {
         ):null}
       </div>
       <button className='btn btn-primary w-100 fs-4 fw-bold' disabled={!(formik.isValid && formik.dirty)}>
-      {loading ? <i className='fa fa-spinner fa-spin'></i> : "Register"}
+      {loading ? <i className='fa fa-spinner fa-spin'></i> : "Login"}
         </button>
       </form>
           <p className=' text-capitalize mt-4'>don't have an account? <Link className=' text-warning ' to={'/register'}>register</Link></p>
