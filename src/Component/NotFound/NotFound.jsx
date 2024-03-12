@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
     
-    <div className=' text-center px-3'>
+    <div className=' text-center px-3 notItem'>
       <img className='w-100' src={img1} alt="not found page" />
     </div>
     </>
