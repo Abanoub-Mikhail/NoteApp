@@ -8,7 +8,7 @@ export default function Navbar() {
 
   function logout() {
     setToken(null)
-    localStorage.removeItem('userToken')
+    localStorage.removeItem('noteToken')
   }
 
   return (

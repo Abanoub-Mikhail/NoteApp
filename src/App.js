@@ -29,8 +29,8 @@ function App() {
 
 
   useEffect(()=>{
-    if (localStorage.getItem("userToken") != null) {
-      setToken(localStorage.getItem("userToken"))
+    if (localStorage.getItem("noteToken") != null) {
+      setToken(localStorage.getItem("noteToken"))
     }
   },[])
 

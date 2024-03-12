@@ -30,7 +30,7 @@ export default function Home() {
     setLoading(true)
     let {data} = await axios.post('https://note-sigma-black.vercel.app/api/v1/notes', values , {
       headers : {
-        token : `3b8ny__${localStorage.getItem('userToken')}`
+        token : `3b8ny__${localStorage.getItem('noteToken')}`
       }
     }).catch((err)=> err)
     
@@ -46,7 +46,7 @@ export default function Home() {
     try {
       let { data } = await axios.get('https://note-sigma-black.vercel.app/api/v1/notes', {
         headers: {
-          token: `3b8ny__${localStorage.getItem('userToken')}`
+          token: `3b8ny__${localStorage.getItem('noteToken')}`
         }
       });
       if (data?.msg == "done") {
@@ -67,7 +67,7 @@ export default function Home() {
     try {
       let { data } = await axios.delete(`https://note-sigma-black.vercel.app/api/v1/notes/${id}`, {
         headers: {
-          token: `3b8ny__${localStorage.getItem('userToken')}`
+          token: `3b8ny__${localStorage.getItem('noteToken')}`
         }
       });
       if (data?.msg == "done") {

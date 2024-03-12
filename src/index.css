@@ -13,6 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-bg-color) ;
+  position: relative;
   
 }
 
@@ -80,7 +81,8 @@ section.form {
     text-align: center;
   }
   .img {
-    width: 100% !important;
+    width: 80% !important;
+    text-align: center;
   }
 
   .revo {
@@ -99,7 +101,7 @@ section.form {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 90px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99999;

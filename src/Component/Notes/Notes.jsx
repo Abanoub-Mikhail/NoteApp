@@ -27,7 +27,7 @@ export default function Notes({allNotes , notesDelete , notesGet}) {
     setLoading(true)
     let {data} = await axios.put(`https://note-sigma-black.vercel.app/api/v1/notes/${allNotes._id}`, values , {
       headers : {
-        token : `3b8ny__${localStorage.getItem('userToken')}`
+        token : `3b8ny__${localStorage.getItem('noteToken')}`
       }
     }).catch((err)=> err)
       notesGet()

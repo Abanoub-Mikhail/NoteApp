@@ -23,7 +23,7 @@ export default function Start() {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="img w-75 ms-auto">
+          <div className="img w-75 mx-auto">
             <img src={img2} alt="start image" className='w-100 rounded-5' />
           </div>
         </div>

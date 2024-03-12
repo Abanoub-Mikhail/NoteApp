@@ -24,7 +24,7 @@ export default function Signin() {
   })
     if (data.msg == 'done') {
       setToken(data.token)
-      localStorage.setItem('userToken' , data.token)
+      localStorage.setItem('noteToken' , data.token)
       navigate('/home')
     }
   }
